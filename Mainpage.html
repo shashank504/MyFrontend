@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Data Scraping</title>
+</head>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    nav {
+        display: flex;
+        background-color: black;
+        color: aliceblue;
+        height: auto;
+
+    }
+
+
+    body {
+        background-color: white;
+
+    }
+
+
+    .title {
+        /* background-color: aqua; */
+        margin-top: 12px;
+        margin-left: 30px;
+        height: 50px;
+        width: 180px;
+        cursor: pointer;
+    }
+
+
+    #sec {
+        margin-top: 7px;
+        height: 40px;
+        width: 440px;
+        border-radius: 45px;
+        border: 2px solid rgb(0, 0, 0);
+        padding: 0px 20px;
+
+    }
+
+
+    .search {
+        padding: 10px 50px;
+        margin-left: 280px;
+        cursor: pointer;
+    }
+
+
+    .about {
+        padding: 25px;
+        margin-left: 360px;
+
+    }
+
+    #ab {
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        text-decoration: none;
+        font-size: x-large;
+
+    }
+
+
+    #ab:hover {
+        color: black;
+    }
+
+
+    h2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: rgb(255, 255, 255);
+        font-size: x-large;
+    }
+
+    h2:hover {
+        color: rgb(0, 0, 0);
+    }
+
+
+    td {
+        border: solid 2px rgb(0, 0, 0);
+        margin-top: 20px;
+    }
+
+    th {
+        height: fit-content;
+        width: 230px;
+        border: solid 2px rgb(0, 0, 0);
+        margin-top: 20px;
+
+    }
+
+    .table {
+        margin-top: 50px;
+        margin-left: 10px;
+        color: rgb(8, 9, 9);
+        width: auto;
+        height: auto;
+
+
+
+
+    }
+
+    td {
+        padding: 10px;
+    }
+
+
+
+    table {
+
+        border-collapse: collapse;
+
+    }
+
+
+
+    footer {
+        background-color: black;
+        color: rgb(255, 255, 255);
+        height: auto;
+
+
+    }
+
+    h4 {
+        margin-left: 570px;
+        padding: 15px;
+    }
+
+
+
+
+
+
+
+    /* This is for mobile */
+
+    @media (max-width: 600px) {
+
+
+
+
+        .table {
+            overflow: hidden;
+            overflow-y: scroll;
+            overflow-x: scroll;
+            height: auto;
+            display: block;
+
+
+
+        }
+
+        nav {
+            display: flex;
+            background-color: rgb(0, 0, 0);
+            height: auto;
+
+        }
+
+
+
+        #sec {
+            margin-top: auto;
+            margin-bottom: auto;
+            width: fit-content;
+        }
+
+
+
+
+        .search {
+            margin: 0 auto;
+            display: inline-block;
+            padding: 30px 5px;
+            margin-right: 8px;
+
+
+        }
+
+
+        h2 {
+            font-size: large;
+            padding: 10px;
+        }
+
+
+
+
+
+        .table {
+            width: auto;
+            height: auto;
+            margin-right: 6px;
+            margin-left: 6px;
+            border-collapse: collapse;
+
+
+
+        }
+
+
+
+        footer {
+            height: 45px;
+        }
+
+
+        h4 {
+            margin: 0 auto;
+            display: inline-block;
+            height: fit-content;
+            width: fit-content;
+            margin-left: 20px;
+        }
+
+
+        #l {
+            padding: 8px 10px;
+        }
+
+
+
+    }
+</style>
+
+
+<body>
+
+    <div class="main">
+        <nav>
+
+            <div class="title">
+
+                <h2> Amazon Data Scrap</h2>
+
+            </div>
+
+            <div class="search">
+
+                <input type="text" name="search" id="sec" placeholder="Search">
+
+            </div>
+
+            <!-- <div class="about">
+                <a href="#" id="ab">About</a>
+            </div> -->
+
+        </nav>
+
+
+
+        <div class="table" id="tab">
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Color</th>
+                    <th>Review</th>
+                    <th>Ratings</th>
+                    <th>Sold out</th>
+                    <th>Review</th>
+                    <th>Ratings</th>
+                    <th>Sold out</th>
+                    <th>Sold out</th>
+                    <th>Review</th>
+                    <th>Ratings</th>
+                    <th>Sold out</th>
+                </tr>
+                <tr>
+                    <td> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet nostrum vero nulla voluptates
+                        commodi facere unde a dignissimos sint dolore blanditiis laudantium at doloremque, repellat,
+                        praesentium laborum animi facilis accusamus. </td>
+                    <td>200Rs</td>
+                    <td>black</td>
+                </tr>
+                <tr>
+                    <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, </td>
+                    <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, </td>
+                    <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, </td>
+                </tr>
+                <tr>
+                    <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, </td>
+                    <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, </td>
+                    <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, </td>
+                </tr>
+                <tr>
+                    <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, </td>
+                    <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, </td>
+                    <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, </td>
+                    <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, </td>
+                    <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, </td>
+                    <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, </td>
+                </tr>
+                <tr>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                </tr>
+                <tr>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                </tr>
+                <tr>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                </tr>
+                <tr>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                </tr>
+                <tr>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                </tr>
+                <tr>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                </tr>
+                <tr>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                </tr>
+                <tr>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                </tr>
+                <tr>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                    <td> ###### </td>
+                </tr>
+
+
+            </table>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+<script>
+
+
+
+
+</script>
+
+<footer>
+    <h4 id="l"> Copyright@2023 by Akshar and shashank </h3>
+</footer>
+
+
+
+</html>
